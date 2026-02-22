@@ -50,5 +50,5 @@ jobs:
           crtx_file=$(echo $crtx_resp | jq -r ".file_name")
           curl -o "$crtx_file" "$crtx_url"
           chmod +x "$crtx_file"
-          ./"$crtx_file" --api-base-url "${{ env.CORTEX_API_URL }}" --api-key "${{ env.CORTEX_API_KEY }}" --api-key-id "${{ env.CORTEX_API_KEY_ID }}" code scan --directory "${{ github.workspace }}" --branch branch --repo-id "${{ github.repository }}" --source "GITHUB_ACTIONS" --output-format json --output-file-path ./output.json --upload-mode no-code
+          ./"$crtx_file" --api-base-url "${{ env.CORTEX_API_URL }}" --api-key "${{ env.CORTEX_API_KEY }}" --api-key-id "${{ env.CORTEX_API_KEY_ID }}" code scan --directory "${{ github.workspace }}" --branch branch --repo-id "${{ github.repository }}" --source "GITHUB_ACTIONS" --output json --output-file-path ./output.json --upload-mode no-code
          
