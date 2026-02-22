@@ -1,4 +1,4 @@
-name: Build, Scan, Push to ECR and Deploy to EC2
+name: Code Scan with Cortex
 
 on:
   push:
